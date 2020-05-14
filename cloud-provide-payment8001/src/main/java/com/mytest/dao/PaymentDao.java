@@ -1,6 +1,7 @@
 package com.mytest.dao;
 
 import com.mytest.entity.Payment;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @Description
@@ -8,6 +9,7 @@ import com.mytest.entity.Payment;
  * @Date 2020/5/14 10:28
  * @Version 1.0
  */
+@Mapper
 public interface PaymentDao {
     /**
      * 保存订单
