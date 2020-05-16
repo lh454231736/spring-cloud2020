@@ -1,4 +1,4 @@
-package com.mytest.common;
+package com.common.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,13 +10,17 @@ import lombok.Data;
  * @Version 1.0
  */
 @Data
-@AllArgsConstructor
 public class ApiResult {
     private boolean flag;
     private String message;
     private Object object;
 
     private ApiResult(){}
+    private ApiResult(boolean flag, String message, Object o){
+        this.flag = flag;
+        this.message = message;
+        this.object = o;
+    }
     public static ApiResult success(){
         return new ApiResult(true, "操作成功！", null);
     }
