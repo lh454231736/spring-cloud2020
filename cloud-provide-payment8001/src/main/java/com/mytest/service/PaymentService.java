@@ -1,7 +1,7 @@
 package com.mytest.service;
 
-import com.mytest.common.ApiResult;
-import com.mytest.entity.Payment;
+import com.common.entity.Payment;
+import com.common.util.ApiResult;
 
 /**
  * @Description

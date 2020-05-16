@@ -1,8 +1,8 @@
 package com.mytest.service.impl;
 
-import com.mytest.common.ApiResult;
+import com.common.entity.Payment;
+import com.common.util.ApiResult;
 import com.mytest.dao.PaymentDao;
-import com.mytest.entity.Payment;
 import com.mytest.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.mytest.dao;
 
-import com.mytest.entity.Payment;
+import com.common.entity.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
