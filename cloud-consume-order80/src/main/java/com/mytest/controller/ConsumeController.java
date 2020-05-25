@@ -18,17 +18,18 @@ public class ConsumeController {
 
     @Value("${service.payment.url}")
     private String serviceUrl;
+    @Value("${service.payment.name}")
+    private String serviceName;
     @Autowired
     private RestTemplate restTemplate;
 
     @PostMapping("/consume/payment/create")
     public ApiResult savePayment(@RequestBody Payment payment){
          System.out.println(payment);
-         return restTemplate.postForObject(serviceUrl + "/save/payment", payment, ApiResult.class);
+         return restTemplate.postForObject("http://cloud-provide-payment" + "/save/payment", payment, ApiResult.class);
     }
     @GetMapping("/consume/payment/{id}")
     public ApiResult queryPayment(@PathVariable long id){
-        return restTemplate.getForObject(serviceUrl + "/payment/" + id, ApiResult.class);
+        return restTemplate.getForObject("http://cloud-provide-payment" + "/payment/" + id, ApiResult.class);
     }
-
 }

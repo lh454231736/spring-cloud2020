@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     name: cloud-provide-payment
@@ -10,8 +10,6 @@ spring:
     username: root
     password: 123456
 #    initialization-mode: always
-    sql-script-encoding: UTF-8
-    schema: classpath:schema-all.sql
 mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.mytest.entity
@@ -22,5 +20,5 @@ eureka:
     service-url:
        defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
   instance:
-    instance-id: cloud-provide-payment8001
-    prefer-ip-address: true
+      instance-id: cloud-provide-payment7002
+      prefer-ip-address: true

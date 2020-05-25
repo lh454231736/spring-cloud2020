@@ -20,12 +20,11 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentDao paymentDao;
     @Value("${server.port}")
     private String port;
-
     @Override
     public ApiResult savePayment(Payment payment) {
         int result = paymentDao.insertPayment(payment);
         if(result > 0)
-            return ApiResult.success();
+            return ApiResult.successResult(null, "添加成功，serverPort:" + port);
         return ApiResult.failResultMessage("新增失败！");
     }
 
