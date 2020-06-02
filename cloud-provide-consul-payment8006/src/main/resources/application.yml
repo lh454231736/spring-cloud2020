@@ -1,0 +1,20 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: consul-provide-payment
+  cloud:
+    consul:
+      host: http://192.168.136.128
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        instance-id: consul-provide-payment
+#        service-name:
+  datasource:
+    url: jdbc:mysql://192.168.136.128:8889/mytest?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+#mybatis:
+#  mapper-locations: classpath:/mapper/*Mapper.xml

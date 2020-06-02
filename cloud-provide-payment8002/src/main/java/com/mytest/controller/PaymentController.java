@@ -15,17 +15,20 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 public class PaymentController {
-
-    @Autowired
+   @Autowired
     private PaymentService paymentService;
-
-    @PostMapping("/save/payment")
-    public ApiResult savePayment(@RequestBody Payment payment) {
-        return paymentService.savePayment(payment);
-    }
-
-    @GetMapping("/payment/{id}")
-    public ApiResult queryPayment(@PathVariable Long id) {
-        return paymentService.queryById(id);
+   @Value("${server.port}")
+   private String port;
+   @PostMapping("/save/payment")
+   public ApiResult savePayment(@RequestBody Payment payment){
+       return paymentService.savePayment(payment);
+   }
+   @GetMapping("/payment/{id}")
+   public ApiResult queryPayment(@PathVariable Long id){
+       return paymentService.queryById(id);
+   }
+    @GetMapping("/provide/lb")
+    public String getServerPort(){
+        return port;
     }
 }

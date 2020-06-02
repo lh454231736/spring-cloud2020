@@ -6,7 +6,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.43.64:8889/mytest?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://192.168.136.128:8889/mytest?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
 #    initialization-mode: always
@@ -24,3 +24,7 @@ eureka:
   instance:
     instance-id: cloud-provide-payment8001
     prefer-ip-address: true
+#    客户端需要每隔多久就向服务端发送心跳，单位秒，默认是30s
+    lease-renewal-interval-in-seconds: 2
+#    eureka server端自从上次收到客户端心跳后多久没有收到心跳就把该instance移除掉，默认是90s
+    lease-expiration-duration-in-seconds: 2
