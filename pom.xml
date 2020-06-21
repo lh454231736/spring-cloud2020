@@ -18,6 +18,8 @@
     <module>cloud-consume-consul-order80</module>
     <module>cloud-consume-fegin-order80</module>
     <module>cloud-consume-fegin-order80</module>
+    <module>cloud-provide-hystrix-payment8003</module>
+    <module>cloud-consume-hystrix-feign-order80</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>
