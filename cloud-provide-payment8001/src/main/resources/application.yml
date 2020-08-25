@@ -20,11 +20,11 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-       defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
+       defaultZone: http://localhost:7001/eureka/
   instance:
     instance-id: cloud-provide-payment8001
     prefer-ip-address: true
 #    客户端需要每隔多久就向服务端发送心跳，单位秒，默认是30s
-    lease-renewal-interval-in-seconds: 2
+#    lease-renewal-interval-in-seconds: 2
 #    eureka server端自从上次收到客户端心跳后多久没有收到心跳就把该instance移除掉，默认是90s
-    lease-expiration-duration-in-seconds: 2
+#    lease-expiration-duration-in-seconds: 2

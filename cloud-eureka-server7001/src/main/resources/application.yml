@@ -15,7 +15,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
 # 关闭自我保护机制，默认是开启的，关闭之后的效果就是指定时间没收到心跳，直接把你剔除掉。
-  server:
-    enable-self-preservation: false
+#  server:
+#    enable-self-preservation: false
 #    清理服务的间隔时间，以前默认是60s，改为2s，只要距离上次收到心跳，2秒内没收到心跳直接把你剔除掉。
-    eviction-interval-timer-in-ms: 2000
+#    eviction-interval-timer-in-ms: 2000
