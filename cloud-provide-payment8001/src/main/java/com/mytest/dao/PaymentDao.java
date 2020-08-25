@@ -2,6 +2,7 @@ package com.mytest.dao;
 
 import com.common.entity.Payment;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Description
